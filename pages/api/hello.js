@@ -1,6 +1,6 @@
 const getRandInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
-export default async (request, response) => {
+const hello = async (request, response) => {
   response.setHeader("Content-Type", "application/json");
 
   if (request.method === "POST") {
@@ -33,3 +33,5 @@ export default async (request, response) => {
     return response.status(405).send({ message: "Method not allowed" });
   }
 };
+
+export default hello;
